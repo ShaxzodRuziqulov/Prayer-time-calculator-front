@@ -5,6 +5,7 @@ export interface CreateReminderPayload {
   reminderTime: string;
   days: string[];
   active: boolean;
+  timeZone: string;
 }
 
 export function createReminder(payload: CreateReminderPayload) {

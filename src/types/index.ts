@@ -59,6 +59,7 @@ export interface Reminder {
   reminderTime: string;
   days: string[];
   active: boolean;
+  timeZone?: string;
 }
 
 export interface Goal {
@@ -82,4 +83,29 @@ export interface DeviceSession {
   lastSeenAt?: string;
   expiresAt?: string;
   current?: boolean;
+}
+
+export interface NotificationEndpoint {
+  id?: number | string;
+  channel?: string;
+  endpointKey: string;
+  deviceName?: string;
+  active?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface NotificationHistoryItem {
+  id?: number | string;
+  channel?: string;
+  endpointKey?: string;
+  title?: string;
+  body?: string;
+  payload?: string;
+  delivered?: boolean;
+  sent?: boolean;
+  status?: string;
+  error?: string;
+  createdAt?: string;
+  sentAt?: string;
 }
